@@ -51,9 +51,10 @@ function buildNotes(notes) {
   result.innerHTML = '';
   topic.value = '';
   textArea.value = '';
+  // style="background-color: ${clr || color.value}"
   notes.forEach(note => {
     result.innerHTML += `
-    <div class="note" style="background-color: ${clr || color.value}">
+    <div class="note" >
       <h2>${note.topic}</h2>
       <p contenteditable="true">${note.description}</p>
       <span class="times">&times</span>

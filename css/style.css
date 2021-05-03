@@ -37,6 +37,31 @@ h1 {
   padding: 1rem;
 }
 
+.note:nth-of-type(1) {
+  background-color: #a80404;
+  color: #fff;
+}
+
+.note:nth-of-type(2) {
+  background-color: #1e1e9b;
+  color: #fff;
+}
+
+.note:nth-of-type(3) {
+  background-color: black;
+  color: #fff;
+}
+
+.note:nth-of-type(4) {
+  background-color: gold;
+  color: #000;
+}
+
+.note:nth-of-type(5) {
+  background-color: indigo;
+  color: #fff;
+}
+
 .displayNone {
   display: none !important;
 }
