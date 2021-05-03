@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Notes</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="notes__heading">
+        <h2>My Notes</h2>
+        <div>
+          <input
+            class="search"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search Note Topic"
+          />
+          <button>Add Note</button>
+        </div>
+      </section>
+      <div>
+        <input type="text" name="topic" id="topic" placeholder="Topic" />
+        <textarea
+          name=""
+          id="textarea"
+          cols="30"
+          rows="10"
+          placeholder="//Write a note here"
+        ></textarea>
+      </div>
+      <div class="flex2">
+        <input type="color" value="#28bdac" id="color" />
+        <button class="button__add">Add note</button>
+      </div>
+
+      <div id="result"></div>
+    </main>
+
+    <script type="module" src="notes.js"></script>
+  </body>
+</html>

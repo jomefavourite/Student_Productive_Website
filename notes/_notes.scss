@@ -1,0 +1,17 @@
+$colors: (
+  'color1': red,
+);
+
+.notes__heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.displayNone {
+  display: none !important;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <input
+        class="search"
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Search for Tasks"
+      />
+      <div>
+        <input type="text" name="topic" id="topic" placeholder="Topic" />
+        <input type="date" name="date" id="date" />
+        <textarea
+          name=""
+          id="textarea"
+          cols="30"
+          rows="10"
+          placeholder="input your tasks"
+        ></textarea>
+      </div>
+      <button id="addTasks">Add tasks</button>
+      <section id="tasks"></section>
+    </main>
+
+    <script type="module" src="tasks.js"></script>
+  </body>
+</html>

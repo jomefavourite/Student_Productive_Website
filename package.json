@@ -1,0 +1,16 @@
+{
+  "name": "Student_Productive_Website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass scss:css",
+    "watch": "sass scss:css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.12"
+  }
+}
