@@ -5,14 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPA/CGPA Forecaster</title>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <p>Enter the number GPA scores you have</p>
-    <input type="number" name="number of GPA" id="numberScore" value="2" />
+    <main class="container">
+      <p>Enter the number GPA scores you have, so far</p>
+      <input type="number" name="number of GPA" id="numberScore" value="2" />
 
-    <section>
-      <input type="number" name="score1" id="score1" placeholder="4.5" />
-      <input type="number" name="score1" id="score1" placeholder="4.5" />
-    </section>
+      <div class="forecaster">
+        <h2><span class="level">1</span>00 Level</h2>
+        <div class="semester">
+          <label for="score1">First Semester GPA </label>
+          <label for="score2">Second Semester GPA </label>
+        </div>
+
+        <input
+          type="number"
+          name="first-semester-score"
+          id="score1"
+          placeholder="4.5"
+        />
+        <input
+          type="number"
+          name="first-semester-score"
+          id="score2"
+          placeholder="4.5"
+        />
+
+        <button class="next__semester">Next Semester</button>
+        <button id="calcGpa">Forecasts Score</button>
+      </div>
+    </main>
+
+    <script type="module" src="forecaster.js"></script>
   </body>
 </html>

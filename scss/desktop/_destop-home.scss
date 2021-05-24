@@ -1,0 +1,144 @@
+@use '../utilities' as util;
+
+@include util.medium() {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .header {
+    height: fit-content;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    nav {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+
+      &__item {
+        list-style: none;
+        > a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      &__item + &__item {
+        margin-left: 20px;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #000;
+      }
+
+      span + span {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 3rem;
+
+    &__contents {
+      order: 1;
+      text-align: left;
+      margin: auto 0;
+
+      h1,
+      p {
+        margin-left: 0;
+      }
+    }
+
+    &__bg {
+      order: 2;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
+
+  .feature {
+    @include util.grid();
+
+    &__content,
+    img {
+      text-align: left;
+      margin: auto;
+    }
+
+    &:nth-of-type(2n) {
+      .feature__content {
+        order: 1;
+      }
+
+      img {
+        order: 2;
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      @include util.grid();
+    }
+
+    .logo img {
+      margin-left: 0;
+    }
+
+    .nav {
+      &__list {
+        margin-left: 0;
+        flex-direction: row;
+      }
+    }
+
+    &__social {
+      justify-content: flex-end;
+    }
+
+    &__second {
+      margin: 0;
+
+      p {
+        margin: 3rem auto;
+        text-align: right;
+      }
+    }
+  }
+}

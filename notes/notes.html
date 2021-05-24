@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <mai class="note--color1">
+    <main class="note--color1">
       <section class="notes__heading">
         <h2>My Notes</h2>
         <div>
@@ -18,26 +18,38 @@
             id="search"
             placeholder="Search Note Topic"
           />
-          <button>Add Note</button>
+          <button id="createNotes">Create Notes</button>
         </div>
       </section>
-      <div>
-        <input type="text" name="topic" id="topic" placeholder="Topic" />
-        <textarea
-          name=""
-          id="textarea"
-          cols="30"
-          rows="10"
-          placeholder="//Write a note here"
-        ></textarea>
-      </div>
-      <div class="flex2">
-        <input type="color" value="#28bdac" id="color" />
-        <button class="button__add">Add note</button>
+      <div class="modal">
+        <form>
+          <input type="text" name="topic" id="topic" placeholder="Topic" />
+
+          <div>
+            <textarea
+              name=""
+              id="textarea"
+              cols="30"
+              rows="10"
+              placeholder="//Write a note here"
+            ></textarea>
+
+            <div class="note__write">
+              <div>write</div>
+              <div>bold</div>
+              <div>checkbox</div>
+              <div>todo list</div>
+            </div>
+          </div>
+          <button type="submit" class="button__add" id="addNote">
+            Add note
+          </button>
+        </form>
       </div>
 
       <div id="result"></div>
-    </mai>
+      <div class="notFound">Not found</div>
+    </main>
 
     <script type="module" src="notes.js"></script>
   </body>

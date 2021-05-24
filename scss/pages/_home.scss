@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&family=Public+Sans:wght@400;500&display=swap');
+
+.header {
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  nav {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+
+    &__item {
+      list-style: none;
+      > a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    &__item + &__item {
+      margin-left: 20px;
+    }
+  }
+
+  .hamburger {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: #000;
+    }
+
+    span + span {
+      margin-top: 0.2rem;
+    }
+  }
+
+  .change #span1 {
+    transform: rotate(-45deg) translate(-3px, 2px);
+  }
+
+  .change #span2 {
+    opacity: 0;
+  }
+
+  .change #span3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  .toggle_show {
+    display: block;
+  }
+}
+
+.hero {
+  &__bg {
+    > img {
+      margin: auto;
+      max-width: 500px;
+    }
+  }
+
+  &__contents {
+    text-align: center;
+
+    p {
+      max-width: 434px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    > * + * {
+      margin-top: 1rem;
+    }
+  }
+
+  &__arrow {
+    margin-top: 4rem;
+    img {
+      width: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.aboutus {
+  text-align: center;
+  margin: 10rem auto;
+  max-width: 440px;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.feature {
+  @at-root #{&}s {
+    margin: 10rem auto;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  text-align: center;
+
+  img {
+    margin: 0 auto 2rem;
+    max-width: 15rem;
+  }
+
+  &__content {
+    > * + * {
+      margin-top: 1rem;
+    }
+  }
+
+  & + & {
+    margin-top: 8rem;
+  }
+}
+
+.footer {
+  background: #000;
+  padding: 5rem 0;
+  color: #fff;
+  text-align: center;
+
+  .logo img {
+    max-width: 121px;
+    margin: 0 auto;
+  }
+
+  .nav {
+    margin: 2rem auto;
+    &__list {
+      margin: 0 auto;
+      flex-direction: column;
+    }
+
+    &__list__item {
+      margin-left: 0;
+      margin-top: 1rem;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    a + a {
+      margin-left: 10px;
+    }
+  }
+
+  &__second {
+    margin: 3rem auto;
+
+    > * + * {
+      margin: 2rem auto;
+    }
+  }
+
+  &__cite {
+    font-size: 1rem;
+    font-style: italic;
+  }
+}
