@@ -2,4 +2,10 @@
 @use './pages/home';
 @use './pages/notes';
 @use './pages/forecaster';
-@use './desktop/destop-home';
+@use './pages/tasks';
+@use './pages/link';
+@use './components/footer-component';
+@use './desktop/home-desktop';
+@use './desktop/notes-desktop';
+@use './desktop/tasks-desktop';
+@use './desktop/link-desktop';

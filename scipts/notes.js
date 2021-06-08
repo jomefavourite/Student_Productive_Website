@@ -4,7 +4,7 @@ const topic = select('#topic');
 const textArea = select('#textarea');
 const btnAdd = select('.button__add');
 const search = select('.search');
-const createNotesBtn = select('#createNotes');
+const createNotesBtn = select('.createNotes');
 const modal = select('.modal');
 
 let initialNotes = [
@@ -22,12 +22,8 @@ createNotesBtn.addEventListener('click', () => {
   modal.classList.toggle('show');
 });
 document.addEventListener('click', e => {
-  if (e.target.classList.value === 'times') {
-    return removeNote(e.target);
-  }
-
-  if (e.target.keyCode === 13) {
-    addNotes();
+  if (e.target.classList.value === 'delete') {
+    return removeNote(e.target.parentElement);
   }
 });
 
@@ -48,18 +44,20 @@ function addNotes(e) {
 }
 
 function buildNotes(notes) {
-  const result = select('#result');
-  result.innerHTML = '';
+  const notesContainer = select('.notes__container');
+  notesContainer.innerHTML = '';
   topic.value = '';
   textArea.value = '';
   // style="background-color: ${clr || color.value}"
   notes.forEach(note => {
-    result.innerHTML += `
+    notesContainer.innerHTML += `
     <div class="note" >
       <h2 contenteditable="false">${note.topic}</h2>
       <pre contenteditable="false">${note.description}</pre>
-      <span class="times">&times</span>
       <p class="edit">edit</p>
+      <button class="note__delete">
+        <img class="delete" src="../images/delete_icon.svg" alt="delete icon" />
+      </button>
     </div>
   `;
   });

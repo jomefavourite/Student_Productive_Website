@@ -19,20 +19,34 @@
 
   .header {
     height: fit-content;
+    height: -moz-fit-content;
   }
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
+    display: block;
+    position: static;
+    top: 0;
+    left: unset;
+    height: fit-content;
+    height: -moz-fit-content;
+    margin-left: auto;
 
-    nav {
-      display: block;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      .hamburger {
+        display: none;
+      }
     }
 
     &__list {
-      display: flex;
+      // display: flex;
+      flex-direction: row;
+      margin-top: unset;
+      justify-content: flex-end;
 
       &__item {
         list-style: none;
@@ -43,25 +57,8 @@
       }
 
       &__item + &__item {
+        margin-top: 0;
         margin-left: 20px;
-      }
-    }
-
-    .hamburger {
-      display: none;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-
-      span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: #000;
-      }
-
-      span + span {
-        margin-top: 0.2rem;
       }
     }
   }
@@ -121,10 +118,18 @@
       margin-left: 0;
     }
 
+    &__nav {
+      margin: 3rem auto;
+    }
+
     .nav {
       &__list {
-        margin-left: 0;
         flex-direction: row;
+        justify-content: flex-start;
+
+        &__item {
+          margin-top: 0;
+        }
       }
     }
 

@@ -4,42 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Productive Website</title>
+    <title>PlanDone - Student Productive Website</title>
+
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="PlanDone is made for Students who would like to learn smart, be
+    productive and access everything they need while studying in one
+    place."
+    />
+    <meta
+      name="keywords"
+      content="student productive app, student productive website, CGPA forecaster, create notes, create tasks, Favourite Jome"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+
+    <!-- Style sheets -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header container" id="home">
-      <div class="nav">
+      <nav class="nav__container">
         <a href="/" class="logo">
           <img src="./images/PlanDone.svg" alt="plan done logo" />
         </a>
 
-        <nav>
+        <div class="nav">
           <ul class="nav__list">
-            <li class="nav__list__item">
-              <a href="#">Home</a>
+            <li class="nav__list__item active">
+              <a href="./index.html">Home</a>
             </li>
             <li class="nav__list__item">
-              <a href="./notes/notes.html">Notes</a>
+              <a href="#about">About Us</a>
             </li>
             <li class="nav__list__item">
-              <a href="./tasks/tasks.html">Tasks</a>
+              <a href="./views/notes.html">Notes</a>
             </li>
             <li class="nav__list__item">
-              <a href="./forecaster/forecaster.html">GPA/CGPA Forecaster</a>
+              <a href="./views/tasks.html">Tasks</a>
             </li>
             <li class="nav__list__item">
-              <a href="#">Links</a>
+              <a href="./views/forecaster.html">CGPA Forecaster</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./views/link.html">Links</a>
             </li>
           </ul>
-        </nav>
+        </div>
 
         <button class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
         </button>
-      </div>
+      </nav>
 
       <section class="hero">
         <div class="hero__bg">
@@ -58,13 +95,13 @@
         </div>
       </section>
 
-      <div class="hero__arrow">
+      <a class="hero__arrow" href="#about">
         <img src="./images/down-arrow.svg" alt="down arrow" />
-      </div>
+      </a>
     </header>
 
     <main class="main container">
-      <section class="aboutus">
+      <section class="aboutus" id="about">
         <h2>About Us</h2>
         <p>
           PlanDone is made for Students who would like to learn smart, be
@@ -79,6 +116,10 @@
           We aim to give you the best service you can ever ask for. We’ve create
           this platform for you so make sure you Plan and then complete (Done).
         </p>
+        <a href="./views/about.html" class="aboutus__readmore">
+          <span>Read more</span>
+          <img src="./images/arrowforward.svg" alt="arrow forward" />
+        </a>
       </section>
 
       <section class="features">
@@ -101,7 +142,7 @@
               Also, the notes are designed with multiple colours, to help you
               easily identify a particular topic.
             </p>
-            <a href="" class="button">Start taking Notes</a>
+            <a href="./views/notes.html" class="button">Start taking Notes</a>
           </div>
         </section>
 
@@ -120,7 +161,7 @@
               and re-save at your well.
             </p>
             <p>It’s all up to you, start creating your tasks now.</p>
-            <a href="" class="button">Start creating Tasks</a>
+            <a href="./views/tasks.html" class="button">Start creating Tasks</a>
           </div>
         </section>
 
@@ -137,7 +178,9 @@
               The aim is to help you see what you need to come out with a
               first-class, so all the best!
             </p>
-            <a href="" class="button">Click here to Forecast</a>
+            <a href="./views/forecaster.html" class="button">
+              Click here to Forecast
+            </a>
           </div>
         </section>
 
@@ -155,11 +198,12 @@
               By creating a link to various website needed frequently you'll
               always access them with one click.
             </p>
-            <a href="" class="button">Create Links</a>
+            <a href="./views/link.html" class="button">Create Links</a>
           </div>
         </section>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
@@ -167,22 +211,22 @@
             <a href="/" class="logo">
               <img src="./images/PlanDone-white.svg" alt="Plan done Logo" />
             </a>
-            <nav class="nav">
+            <nav class="footer__nav">
               <ul class="nav__list">
                 <li class="nav__list__item">
-                  <a href="#">Home</a>
+                  <a href="./index.html">Home</a>
                 </li>
                 <li class="nav__list__item">
-                  <a href="./notes/notes.html">Notes</a>
+                  <a href="./views/notes.html">Notes</a>
                 </li>
                 <li class="nav__list__item">
-                  <a href="./tasks/tasks.html">Tasks</a>
+                  <a href="./views/tasks.html">Tasks</a>
                 </li>
                 <li class="nav__list__item">
-                  <a href="./forecaster/forecaster.html">GPA/CGPA Forecaster</a>
+                  <a href="./views/forecaster.html">CGPA Forecaster</a>
                 </li>
                 <li class="nav__list__item">
-                  <a href="#">Links</a>
+                  <a href="./views/link.html">Links</a>
                 </li>
               </ul>
             </nav>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Links - PlanDone</title>
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="PlanDone is made for Students who would like to learn smart, be
+      productive and access everything they need while studying in one
+      place."
+    />
+    <meta
+      name="keywords"
+      content="student productive app, student productive website, CGPA forecaster, create notes, create tasks, Favourite Jome"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header container aboutus-header" id="home">
+      <nav class="nav__container">
+        <a href="/" class="logo">
+          <img src="../images/PlanDone.svg" alt="plan done logo" />
+        </a>
+
+        <div class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav__list__item active">
+              <a href="#">About Us</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./notes.html">Notes</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./tasks.html">Tasks</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./forecaster.html">CGPA Forecaster</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./link.html">Links</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="hamburger">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </button>
+      </nav>
+
+      <section class="desc__heading">
+        <h2>My Links</h2>
+        <div class="desc__content">
+          <div class="desc__search">
+            <img src="../images/search.svg" alt="search icon" />
+            <input
+              class="search"
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search Links"
+            />
+          </div>
+          <button class="button createLinks" id="">
+            <span class="createNotes__text">Create Links</span>
+            <img src="../images/add.svg" alt="add icon" />
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <div class="modal">
+        <form>
+          <input
+            type="text"
+            name="url"
+            class="title"
+            placeholder="Enter The Title"
+          />
+          <input
+            type="text"
+            name="urlName"
+            id="urlName"
+            placeholder="Enter Url Name"
+          />
+
+          <button type="submit" class="button button__add" id="addLink">
+            Add Link
+          </button>
+        </form>
+      </div>
+
+      <section class="links__container"></section>
+      <div class="notFound">Not found</div>
+    </main>
+
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../scipts/link.js"></script>
+  </body>
+</html>

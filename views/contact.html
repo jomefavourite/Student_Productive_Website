@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - PlanDone</title>
+    <style>
+      form {
+        text-align: center;
+        box-shadow: 0px 0px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Contact Us</h1>
+      <div>
+        <label for="fname">First name: </label>
+        <input type="text" name="fname" id="fname" />
+      </div>
+      <div>
+        <label for="lname">Last name: </label>
+        <input type="text" name="lname" id="lname" />
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <p>Gender:</p>
+        <input type="radio" name="gender" id="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" />
+        <label for="female">female</label>
+      </div>
+      <div>
+        <select name="phones" id="phones" size="3" multiple>
+          <option value="Nokia">Nokia</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Oppo">Oppo</option>
+          <option value="Infinix">Infinix</option>
+          <option value="Iphone">Iphone</option>
+          <option value="Hauwei">Hauwei</option>
+        </select>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

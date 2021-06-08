@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Tasks - PlanDone</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="nav__container">
+        <a href="/" class="logo">
+          <img src="../images/PlanDone.svg" alt="plan done logo" />
+        </a>
+
+        <div class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./about.html">About Us</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./notes.html">Notes</a>
+            </li>
+            <li class="nav__list__item active">
+              <a href="./tasks.html">Tasks</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./forecaster.html">CGPA Forecaster</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./link.html">Links</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="hamburger">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </button>
+      </nav>
+
+      <section class="desc__heading">
+        <h2>My Tasks</h2>
+        <div class="desc__content">
+          <div class="desc__search">
+            <img src="../images/search.svg" alt="search icon" />
+            <input
+              class="search"
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search Task Name"
+            />
+          </div>
+          <button class="button createNotes" id="">
+            <span class="createNotes__text">Create Tasks</span>
+            <img src="../images/add.svg" alt="add icon" />
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <div class="modal">
+        <form>
+          <div>
+            <input type="text" name="topic" id="topic" placeholder="Topic" />
+            <input type="date" name="date" id="date" />
+            <textarea
+              name=""
+              id="textarea"
+              cols="30"
+              rows="10"
+              placeholder="input your tasks"
+            ></textarea>
+          </div>
+          <button id="addTasks" class="button">Add tasks</button>
+        </form>
+      </div>
+
+      <section class="tasks__container"></section>
+
+      <div class="notFound">
+        <img src="../images/404-1.svg" alt="Not Found" />
+        <h2>No Task Found</h2>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__first">
+            <a href="/" class="logo">
+              <img src="../images/PlanDone-white.svg" alt="Plan done Logo" />
+            </a>
+            <nav class="footer__nav">
+              <ul class="nav__list">
+                <li class="nav__list__item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./notes.html">Notes</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./tasks.html">Tasks</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./forecaster.html">CGPA Forecaster</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./link.html">Links</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__second">
+            <div class="footer__social">
+              <a href="https://twitter.com/FavouriteJome1">
+                <img src="../images/twitter.svg" alt="twitter logo" />
+              </a>
+              <a href="https://github.com/jomefavourite">
+                <img src="../images/github.svg" alt="github logo" />
+              </a>
+              <a href="https://www.linkedin.com/in/favourite-jome-677766184/">
+                <img src="../images/linkedin.svg" alt="linkedin logo" />
+              </a>
+            </div>
+            <p>© 2021 PlanDone. All rights reserved</p>
+          </div>
+        </div>
+
+        <p class="footer__cite">
+          Design and Developed by
+          <a href="https://jomefavourite.github.io/linktree/">Favourite Jome</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="../scipts/tasks.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

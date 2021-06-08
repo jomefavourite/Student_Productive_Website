@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Notes - PlanDone</title>
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="PlanDone is made for Students who would like to learn smart, be
+      productive and access everything they need while studying in one
+      place."
+    />
+    <meta
+      name="keywords"
+      content="student productive app, student productive website, CGPA forecaster, create notes, create tasks, Favourite Jome"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="nav__container">
+        <a href="/" class="logo">
+          <img src="../images/PlanDone.svg" alt="plan done logo" />
+        </a>
+
+        <div class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./about.html">About Us</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./notes.html " class="active">Notes</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./tasks.html">Tasks</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./forecaster.html">CGPA Forecaster</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="#">Links</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="hamburger">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </button>
+      </nav>
+
+      <section class="desc__heading">
+        <h2>My Notes</h2>
+        <div class="desc__content">
+          <div class="desc__search">
+            <img src="../images/search.svg" alt="search icon" />
+            <input
+              class="search"
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search Note Topic"
+            />
+          </div>
+          <button class="button createNotes" id="">
+            <span class="createNotes__text">Create Notes</span>
+            <img src="../images/add.svg" alt="add icon" />
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <div class="modal" aria-hidden="true">
+        <form>
+          <input type="text" name="topic" id="topic" placeholder="Topic" />
+          <div>
+            <textarea
+              name=""
+              id="textarea"
+              cols="30"
+              rows="10"
+              placeholder="//Write a note here"
+            ></textarea>
+          </div>
+          <button type="submit" class="button button__add" id="addNote">
+            Add note
+          </button>
+        </form>
+      </div>
+
+      <section class="notes__container"></section>
+
+      <div class="notFound">
+        <img src="../images/404-1.svg" alt="Not Found" />
+        <h2>No Notes Found</h2>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__first">
+            <a href="/" class="logo">
+              <img src="../images/PlanDone-white.svg" alt="Plan done Logo" />
+            </a>
+            <nav class="footer__nav">
+              <ul class="nav__list">
+                <li class="nav__list__item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./notes.html">Notes</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./tasks.html">Tasks</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./forecaster.html">CGPA Forecaster</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./link.html">Links</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__second">
+            <div class="footer__social">
+              <a href="https://twitter.com/FavouriteJome1">
+                <img src="../images/twitter.svg" alt="twitter logo" />
+              </a>
+              <a href="https://github.com/jomefavourite">
+                <img src="../images/github.svg" alt="github logo" />
+              </a>
+              <a href="https://www.linkedin.com/in/favourite-jome-677766184/">
+                <img src="../images/linkedin.svg" alt="linkedin logo" />
+              </a>
+            </div>
+            <p>© 2021 PlanDone. All rights reserved</p>
+          </div>
+        </div>
+
+        <p class="footer__cite">
+          Design and Developed by
+          <a href="https://jomefavourite.github.io/linktree/">Favourite Jome</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="../scipts/notes.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
