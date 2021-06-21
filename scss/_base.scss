@@ -1,3 +1,54 @@
+// Start of forecaster
+
+$br: 10px;
+$red: rgb(238, 56, 56);
+$maxWidth: 740px;
+$shade: #c5c5c5;
+$size1: 5px;
+$size2: 10px;
+$size3: 15px;
+$size4: 20px;
+$size5: 30px;
+$size6: 40px;
+$position: fixed;
+$tablet: 700px;
+$mobile: 535px;
+$smaller-screens: 310px;
+
+@mixin modalStyle() {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.692);
+  justify-content: center;
+  align-items: center;
+}
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  // background: linear-gradient(45deg, #3964fe, #47c3fd);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  z-index: -1000;
+
+  & title button {
+    margin-top: $size2;
+  }
+}
+
+// End of forecaster
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +81,8 @@ h1 {
 
 p,
 a,
-pre {
+pre,
+label {
   font-family: 'Public Sans', sans-serif;
   font-size: 18px;
 }
@@ -95,6 +147,14 @@ img {
   &__content,
   &__search {
     display: flex;
+  }
+
+  &__content {
+    .button {
+      display: flex;
+      align-items: center;
+      padding: 0.3rem 1rem;
+    }
   }
 
   &__search {

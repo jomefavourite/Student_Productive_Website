@@ -5,46 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - PlanDone</title>
-    <style>
-      form {
-        text-align: center;
-        box-shadow: 0px 0px 10px black;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <form>
-      <h1>Contact Us</h1>
-      <div>
-        <label for="fname">First name: </label>
-        <input type="text" name="fname" id="fname" />
+    <header class="container" id="home">
+      <nav class="nav__container">
+        <a href="../index.html" class="logo">
+          <img src="../images/PlanDone.svg" alt="plan done logo" />
+        </a>
+
+        <div class="nav">
+          <ul class="nav__list">
+            <li class="nav__list__item active">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./about.html">About Us</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./notes.html">Notes</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./tasks.html">Tasks</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./forecaster.html">CGPA Forecaster</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./link.html">Links</a>
+            </li>
+            <li class="nav__list__item">
+              <a class="active" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="hamburger">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container contact">
+      <form>
+        <h1>Contact Us</h1>
+        <div>
+          <label for="fname">First name: </label>
+          <input type="text" name="fname" id="fname" />
+        </div>
+        <div>
+          <label for="lname">Last name: </label>
+          <input type="text" name="lname" id="lname" />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="meassage" cols="30" rows="10"></textarea>
+        </div>
+        <input type="submit" class="button" value="Submit" />
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__first">
+            <a href="/" class="logo">
+              <img src="../images/PlanDone-white.svg" alt="Plan done Logo" />
+            </a>
+            <nav class="footer__nav">
+              <ul class="nav__list">
+                <li class="nav__list__item">
+                  <a href="../index.html">Home</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./notes.html">Notes</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./tasks.html">Tasks</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./forecaster.html">CGPA Forecaster</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./link.html">Links</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__second">
+            <div class="footer__social">
+              <a href="https://twitter.com/FavouriteJome1">
+                <img src="../images/twitter.svg" alt="twitter logo" />
+              </a>
+              <a href="https://github.com/jomefavourite">
+                <img src="../images/github.svg" alt="github logo" />
+              </a>
+              <a href="https://www.linkedin.com/in/favourite-jome-677766184/">
+                <img src="../images/linkedin.svg" alt="linkedin logo" />
+              </a>
+            </div>
+            <p>© 2021 PlanDone. All rights reserved</p>
+          </div>
+        </div>
+
+        <p class="footer__cite">
+          Design and Developed by
+          <a href="https://jomefavourite.github.io/linktree/">Favourite Jome</a>
+        </p>
       </div>
-      <div>
-        <label for="lname">Last name: </label>
-        <input type="text" name="lname" id="lname" />
-      </div>
-      <div>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" />
-      </div>
-      <div>
-        <p>Gender:</p>
-        <input type="radio" name="gender" id="male" />
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="female" />
-        <label for="female">female</label>
-      </div>
-      <div>
-        <select name="phones" id="phones" size="3" multiple>
-          <option value="Nokia">Nokia</option>
-          <option value="Samsung">Samsung</option>
-          <option value="Oppo">Oppo</option>
-          <option value="Infinix">Infinix</option>
-          <option value="Iphone">Iphone</option>
-          <option value="Hauwei">Hauwei</option>
-        </select>
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+    </footer>
+
+    <script src="../main.js"></script>
   </body>
 </html>

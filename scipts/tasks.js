@@ -1,4 +1,16 @@
-import {select, selectAll, checkLocalStorage} from '../util/init.js';
+function select(name) {
+  return document.querySelector(name);
+}
+
+function selectAll(name) {
+  return document.querySelectorAll(name);
+}
+
+// LocalStorage functionality
+function checkLocalStorage(initialValue, check) {
+  const localData = localStorage.hasOwnProperty(check);
+  return localData ? JSON.parse(localStorage.getItem(check)) : initialValue;
+}
 
 const topic = select('#topic');
 const textArea = select('#textarea');
@@ -54,26 +66,26 @@ document.addEventListener('click', e => {
   // }
 });
 
-const tasksContainer = selectAll('.task');
+// const tasksContainer = selectAll('.task');
 
-tasksContainer.forEach((task, i) => {
-  task.addEventListener('click', e => {
-    if (e.target.innerHTML === 'Edit') {
-      console.log('hello');
-    }
-    const editableTopic = select('h2[contenteditable="false"]');
-    const editableText = select('.desc[contenteditable="false"]');
-    const editableDate = select('.date[contenteditable="false"]');
-    const saveIcon = select('.save-icon');
+// tasksContainer.forEach((task, i) => {
+//   task.addEventListener('click', e => {
+//     if (e.target.innerHTML === 'Edit') {
+//       console.log('hello');
+//     }
+//     // const editableTopic = select('h2[contenteditable="false"]');
+//     // const editableText = select('.desc[contenteditable="false"]');
+//     // const editableDate = select('.date[contenteditable="false"]');
+//     // const saveIcon = select('.save-icon');
 
-    editableText.setAttribute('contenteditable', 'true');
-    //   editableText.addEventListener('keyup', e => {
-    //     tasks[0].description = e.target.innerText;
-    //   });
+//     // editableText.setAttribute('contenteditable', 'true');
+//     // //   editableText.addEventListener('keyup', e => {
+//     // //     tasks[0].description = e.target.innerText;
+//     // //   });
 
-    console.log(editableText.innerText);
-  });
-});
+//     // console.log(editableText.innerText);
+//   });
+// });
 
 function addTasks(e) {
   e.preventDefault();

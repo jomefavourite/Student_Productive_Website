@@ -43,14 +43,14 @@
   <body>
     <header class="header container aboutus-header" id="home">
       <nav class="nav__container">
-        <a href="/" class="logo">
+        <a href="../index.html" class="logo">
           <img src="../images/PlanDone.svg" alt="plan done logo" />
         </a>
 
         <div class="nav">
           <ul class="nav__list">
             <li class="nav__list__item">
-              <a href="/">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li class="nav__list__item active">
               <a href="#">About Us</a>
@@ -65,7 +65,10 @@
               <a href="./forecaster.html">CGPA Forecaster</a>
             </li>
             <li class="nav__list__item">
-              <a href="./link.html">Links</a>
+              <a class="active" href="./link.html">Links</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -98,7 +101,7 @@
       </section>
     </header>
 
-    <main class="container">
+    <main class="container linker">
       <div class="modal">
         <form>
           <input
@@ -121,10 +124,64 @@
       </div>
 
       <section class="links__container"></section>
-      <div class="notFound">Not found</div>
+      <div class="notFound">
+        <img src="../images/404-1.svg" alt="Not Found" />
+        <h2>No Notes Found</h2>
+      </div>
     </main>
 
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../scipts/link.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__first">
+            <a href="/" class="logo">
+              <img src="../images/PlanDone-white.svg" alt="Plan done Logo" />
+            </a>
+            <nav class="footer__nav">
+              <ul class="nav__list">
+                <li class="nav__list__item">
+                  <a href="../index.html">Home</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./notes.html">Notes</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./tasks.html">Tasks</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./forecaster.html">CGPA Forecaster</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="./link.html">Links</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__second">
+            <div class="footer__social">
+              <a href="https://twitter.com/FavouriteJome1">
+                <img src="../images/twitter.svg" alt="twitter logo" />
+              </a>
+              <a href="https://github.com/jomefavourite">
+                <img src="../images/github.svg" alt="github logo" />
+              </a>
+              <a href="https://www.linkedin.com/in/favourite-jome-677766184/">
+                <img src="../images/linkedin.svg" alt="linkedin logo" />
+              </a>
+            </div>
+            <p>© 2021 PlanDone. All rights reserved</p>
+          </div>
+        </div>
+
+        <p class="footer__cite">
+          Design and Developed by
+          <a href="https://jomefavourite.github.io/linktree/">Favourite Jome</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script src="../scipts/link.js"></script>
   </body>
 </html>

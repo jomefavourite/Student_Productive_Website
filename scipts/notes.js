@@ -1,4 +1,16 @@
-import {select, selectAll, checkLocalStorage} from '../util/init.js';
+function select(name) {
+  return document.querySelector(name);
+}
+
+function selectAll(name) {
+  return document.querySelectorAll(name);
+}
+
+// LocalStorage functionality
+function checkLocalStorage(initialValue, check) {
+  const localData = localStorage.hasOwnProperty(check);
+  return localData ? JSON.parse(localStorage.getItem(check)) : initialValue;
+}
 
 const topic = select('#topic');
 const textArea = select('#textarea');
@@ -54,7 +66,7 @@ function buildNotes(notes) {
     <div class="note" >
       <h2 contenteditable="false">${note.topic}</h2>
       <pre contenteditable="false">${note.description}</pre>
-      <p class="edit">edit</p>
+
       <button class="note__delete">
         <img class="delete" src="../images/delete_icon.svg" alt="delete icon" />
       </button>

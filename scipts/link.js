@@ -1,4 +1,16 @@
-import {select, selectAll, checkLocalStorage} from '../util/init.js';
+function select(name) {
+  return document.querySelector(name);
+}
+
+function selectAll(name) {
+  return document.querySelectorAll(name);
+}
+
+// LocalStorage functionality
+function checkLocalStorage(initialValue, check) {
+  const localData = localStorage.hasOwnProperty(check);
+  return localData ? JSON.parse(localStorage.getItem(check)) : initialValue;
+}
 
 const urlName = select('#urlName');
 const createLinkBtn = select('.createLinks');
@@ -21,6 +33,7 @@ const initialLinks = [
 let links = checkLocalStorage(initialLinks, 'links');
 
 btnAdd.addEventListener('click', addLinks);
+search.addEventListener('keyup', e => filterLinks(e));
 createLinkBtn.addEventListener('click', () => {
   modal.classList.toggle('show');
 });
@@ -63,4 +76,30 @@ function addLinks(e) {
   });
   localStorage.setItem('links', JSON.stringify(links));
   buildLinks(links);
+}
+
+function filterLinks(e) {
+  const links = selectAll('.link');
+  const notFound = select('.notFound');
+
+  const searching = e.target.value.toLowerCase();
+
+  // Filters the links
+  [...links].forEach(link => {
+    console.log(link);
+    const linkContent = link.lastElementChild.innerText;
+    if (linkContent.toLowerCase().includes(searching)) {
+      link.style.display = 'block';
+    } else {
+      link.style.display = 'none';
+    }
+  });
+
+  const result = [...links].every(link => {
+    return link.style.display === 'none';
+  });
+
+  result === true
+    ? (notFound.style.display = 'block')
+    : (notFound.style.display = 'none');
 }

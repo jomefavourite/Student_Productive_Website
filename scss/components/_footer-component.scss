@@ -55,5 +55,9 @@
   &__cite {
     font-size: 1rem;
     font-style: italic;
+
+    > a {
+      color: #fff;
+    }
   }
 }

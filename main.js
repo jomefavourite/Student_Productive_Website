@@ -1,4 +1,10 @@
-import {select, selectAll} from './util/init.js';
+function select(name) {
+  return document.querySelector(name);
+}
+
+function selectAll(name) {
+  return document.querySelectorAll(name);
+}
 
 const hamburger = select('.hamburger');
 const nav = select('.nav');
